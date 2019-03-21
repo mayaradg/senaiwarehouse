@@ -19,6 +19,6 @@ from feedstock.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', feedstock_list),
+    path('', feedstock_list, name = 'feedstock_list'),
     path('endereco/<int:pk>/', get_address, name = 'get_address')
 ]
