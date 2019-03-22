@@ -1,0 +1,22 @@
+img{
+    margin:30px;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+    font-size: 45px;
+    color: #075fed;
+}
+
+.custom-table td{
+    font-size:30px;
+}
+
+.custom-table th{
+    font-size:30px;
+}
+
+.custom-btn{
+    font-size:30px;
+}
