@@ -2,7 +2,10 @@
 {% block content %}
     <div class = "container-fluid">
         <h1>Listagem de Produtos</h1>
-        <table class="table table-striped custom-table">
+        <div class = "container-fluid search-bar">
+            <input class = "form-control search" type="text" id="search" onkeyup="myFunction()" placeholder="Busque um produto">
+        </div>
+        <table id = "feedstock-table" class="table table-striped custom-table">
             <thead>
                 <tr>
                     <th scope="col">id</th>
