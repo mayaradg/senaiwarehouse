@@ -7,3 +7,6 @@ class Feedstock(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_addresses(self):
+        return self.feedstockadress_set.all()

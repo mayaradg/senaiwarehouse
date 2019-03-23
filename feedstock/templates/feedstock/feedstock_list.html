@@ -21,12 +21,16 @@
                         <td>{{ feedstock.id }}</td>
                         <td>{{ feedstock.name }}</td>
                         <td>{{ feedstock.quantity }}</td>
-                        {% if  feedstock.address.box  %}
+                        {% if  feedstock.feedstockadress.box  %}
                             <td>{{ feedstock.address.area }}{{ feedstock.address.street }}{{ feedstock.address.module }}{{ feedstock.address.level }}{{ feedstock.address.box }}
                         {% else %}
-                            <td>{{ feedstock.address.area }}{{ feedstock.address.street }}{{ feedstock.address.module }}{{ feedstock.address.level }}
+                            <td>
+                                {% for address in feedstock.get_addresses %}
+                                    {{ address.area }}{{ address.street }}{{ address.module }}{{ address.level }}
+                                {% endfor %}
+                            </td>
                         {% endif %}
-                        </td>
+
                         <td>
                             <a class = "btn btn-success custom-btn" href="{% url 'get_address' pk=feedstock.id %}">Endereço</a>
                         </td>
