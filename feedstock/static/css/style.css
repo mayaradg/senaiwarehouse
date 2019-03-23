@@ -36,3 +36,9 @@ h1{
 .search-bar{
     align-content: center;
 }
+
+.address{
+    margin:20px;
+    padding:30px;
+    background-color: black;
+}
